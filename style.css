@@ -130,7 +130,7 @@ nav{
 	gap: 20px;
 	justify-content: center;
 }
-.Subwaykarakter1{
+.Subwaykarakter{
 	display: block;
 	border-radius: 10px;
 	margin: 20px auto 0;
@@ -143,15 +143,120 @@ nav{
 	text-align: center;
 	color:white;
 font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	border-bottom: 3px solid white;
 }
 .htp h1{
-	font-size: 2rem;
+	font-size: 36px; /* = 2rem ()*/ 
 	margin-bottom: 20px;
 }
-.Subwaykarakter2{
-	display: block;
-	border-radius: 10px;
-	margin: 20px auto 0;
-	max-width: 300px;
-	height: auto;
+
+.installation{
+	background-color: #FCA86A;
+	padding: 94px 20px;
+	text-align: center;
+	color: white;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	border-bottom: 3px solid white;
+}
+.installation h1{
+	font-size: 36px; /* = 2rem ()*/ 
+	margin-bottom: 20px;
+}
+.installation p{
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 10px;
+	
+}
+.information{
+	background-color: #6AEEFC;
+    text-align: center;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+	
+}
+.information h1{
+	color: white;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	align-content: center;
+	align-items: center;
+	text-align: center;
+}
+.ikon-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.række{
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.ikon-container img:hover{
+	filter: brightness(0) invert(1);
+}
+.subwaycrew{
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	justify-content: center;
+	align-content: center;
+	}
+.højresidebillede{
+	height: 250px;
+	width: 300px;
+}
+
+.scrolling-billed{
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1000;
+	opacity: 0; /* skjuler billedet*/
+	transition: opacity 0.5s ease-in-out;
+	animation: fadeIn 2s forwards;
+	animation-delay: 5s;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.scrolling-billed .close-btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001; /* Højere end billedet */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.scrolling-billed .close-btn:hover {
+    opacity: 1;
+}
+
+#luk-popup:checked ~ .scrolling-billed {
+    display: none;
+}
+.checkbox {
+    display: none;
 }
