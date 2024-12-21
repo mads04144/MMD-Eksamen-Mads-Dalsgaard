@@ -1,3 +1,104 @@
 @charset "utf-8";
 /* CSS Document */
+*{
+	margin: 0;
+}
+.subwaylogo{
+	text-align: center; /* I text-align og justify-content sørger jeg for at det centreret vertikalt og horizontalt*/
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
 
+nav{
+	background-color: #C81C1F;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 145px;
+	align-items: center;
+}
+.menu{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+.menu li{
+	color: white;
+	padding: 15px;
+}
+.menu a{
+	color: inherit;
+}
+.menu-box{
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 100%;
+}
+
+.menu-Ikon, .menu-Ikon::before, .menu-Ikon::after{
+	display: block;
+	background-color: white;
+	height: 6px;
+	width: 30px;
+	position: absolute;
+	border-radius: 10px; /* afrunder hjørnerne*/ 
+	transition: transform 10ms;
+}
+.menu-Ikon::before{
+	content:"";
+	margin-top: 8px;
+}
+.menu-Ikon::after{
+	content:"";
+	margin-top: 8px;
+}
+#menu-aktiver:checked + .menu-box .menu-Ikon::before{
+	margin-top: 0;
+	transform: rotate(45deg);
+}
+#menu-aktiver:checked + .menu-box .menu-Ikon::after{
+	margin-top: 0;
+	transform: rotate(-45deg);
+}
+#menu-aktiver:checked + .menu-box .menu-Ikon{
+	background-color: rgba(0,0,0,0);
+}
+#menu-aktiver{
+	display: none;
+}
+@media screen and (max-width: 700px){
+	.menu-box{
+		display: flex
+	}
+	.menu{
+		position: absolute;
+		top:0;
+		right:0;
+		margin-top: 75px;
+		background-color: aqua;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+		
+	}
+	#menu-aktiver ~ .menu li{
+		height: 0;
+		margin: 0;
+		padding: 0;
+		transition: height 1s;
+		display: none;
+	}
+	#menu-aktiver:checked ~ .menu li{
+		height: 50px;
+		padding: 10px;
+		transition: height 1s;
+		display: block;
+	}
+	
+	}
