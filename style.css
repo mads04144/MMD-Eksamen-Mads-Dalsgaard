@@ -70,9 +70,9 @@ nav{
 #menu-aktiver{
 	display: none;
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1200px){
 	.menu-box{
-		display: flex
+		display: flex;
 	}
 	.menu{
 		position: absolute;
@@ -179,13 +179,15 @@ font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roma
 }
 .installation ul li{
 	margin-bottom: 10px;
+	
 }
 .mobil-link {
     display: none; /* Skjul som standard */
+	
   }
 
   /* Gør linket synligt kun på skærme op til 768px bredde */
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .mobil-link {
       display: inline-block;
     }
