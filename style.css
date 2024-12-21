@@ -170,6 +170,26 @@ font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roma
 	padding: 10px;
 	
 }
+.installation ul{
+	 list-style: disc;
+	margin: 20px auto;
+	max-width: 600px;
+	padding-left: 40px;
+	text-align: left;
+}
+.installation ul li{
+	margin-bottom: 10px;
+}
+.mobil-link {
+    display: none; /* Skjul som standard */
+  }
+
+  /* Gør linket synligt kun på skærme op til 768px bredde */
+  @media (max-width: 768px) {
+    .mobil-link {
+      display: inline-block;
+    }
+  }
 .information{
 	background-color: #6AEEFC;
     text-align: center;
