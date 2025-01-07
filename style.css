@@ -2,7 +2,13 @@
 /* CSS Document */
 *{
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
 }
+
+
+
 .subwaylogo{
 	text-align: center; /* I text-align og justify-content sørger jeg for at det centreret vertikalt og horizontalt*/
 	flex: 1;
@@ -15,8 +21,12 @@ nav{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 145px;
+	height: 125px;
 	align-items: center;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	
 }
 .menu{
 	display: flex;
